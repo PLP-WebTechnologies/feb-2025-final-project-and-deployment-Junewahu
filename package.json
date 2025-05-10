@@ -1,0 +1,28 @@
+{
+  "name": "drip-mtaani",
+  "version": "1.0.0",
+  "description": "A modern e-commerce website for Drip Mtaani, a mobile IV hydration service in Nairobi, Kenya",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "e-commerce",
+    "healthcare",
+    "iv-therapy",
+    "kenya",
+    "nairobi"
+  ],
+  "author": "Drip Mtaani",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5"
+  }
+} 
