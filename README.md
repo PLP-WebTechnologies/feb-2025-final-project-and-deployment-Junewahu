@@ -1,5 +1,7 @@
 # Drip Mtaani - Mobile IV Hydration & Wellness Service
 
+© 2024 Drip Mtaani. All Rights Reserved.
+
 A modern e-commerce website for Drip Mtaani, a mobile IV hydration and wellness service in Nairobi, Kenya. The platform provides a seamless experience for booking IV therapy treatments and add-ons, with a focus on user experience, accessibility, and mobile-first design.
 
 ## Features
@@ -114,13 +116,24 @@ The site is deployed on GitHub Pages. Any changes pushed to the main branch will
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project and its contents are proprietary and confidential. Unauthorized copying, distribution, modification, public display, or public performance of this project or its contents is strictly prohibited. All rights are reserved by Drip Mtaani.
+
+The following are protected by copyright and other intellectual property rights:
+- All code, including HTML, CSS, and JavaScript
+- Design elements and user interface components
+- Business logic and algorithms
+- Content and copy
+- Brand assets and trademarks
+
+## Legal Notice
+
+This software and its documentation are protected by copyright laws and international treaties. Unauthorized reproduction or distribution of this software, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under law.
 
 ## Contact
 
 - **Customer Support**: +254 726 059 822
 - **Email**: dripmtaanisupport@gmail.com
-- **Hours**: 8 AM – 10 PM EAT, 7 days/week
+- **Hours**: 24/7 EAT, 7 days/week
 
 ## Acknowledgments
 
