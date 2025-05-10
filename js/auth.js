@@ -205,4 +205,223 @@ class AuthManager {
 // Initialize auth manager when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new AuthManager();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Tab Switching
+    const authTabs = document.querySelectorAll('.auth-tab');
+    const authForms = document.querySelectorAll('.auth-form');
+
+    authTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetForm = tab.dataset.tab;
+            
+            // Update active tab
+            authTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // Show target form
+            authForms.forEach(form => {
+                form.classList.remove('active');
+                if (form.id === `${targetForm}Form`) {
+                    form.classList.add('active');
+                }
+            });
+        });
+    });
+
+    // Password Visibility Toggle
+    const toggleButtons = document.querySelectorAll('.toggle-password');
+    
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const input = button.previousElementSibling;
+            const type = input.type === 'password' ? 'text' : 'password';
+            input.type = type;
+            
+            // Update icon
+            const icon = button.querySelector('i');
+            icon.className = type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
+        });
+    });
+
+    // Form Validation
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+
+    // Login Form Validation
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById('loginEmail');
+        const password = document.getElementById('loginPassword');
+        let isValid = true;
+
+        // Reset previous errors
+        clearErrors();
+
+        // Validate email
+        if (!validateEmail(email.value)) {
+            showError(email, 'Please enter a valid email address');
+            isValid = false;
+        }
+
+        // Validate password
+        if (password.value.length < 6) {
+            showError(password, 'Password must be at least 6 characters');
+            isValid = false;
+        }
+
+        if (isValid) {
+            // Here you would typically send the login request to your server
+            showNotification('Logging in...', 'info');
+            // Simulate API call
+            setTimeout(() => {
+                showNotification('Login successful!', 'success');
+                window.location.href = 'index.html';
+            }, 1500);
+        }
+    });
+
+    // Registration Form Validation
+    registerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('registerName');
+        const email = document.getElementById('registerEmail');
+        const phone = document.getElementById('registerPhone');
+        const password = document.getElementById('registerPassword');
+        const confirmPassword = document.getElementById('confirmPassword');
+        let isValid = true;
+
+        // Reset previous errors
+        clearErrors();
+
+        // Validate name
+        if (name.value.trim().length < 2) {
+            showError(name, 'Name must be at least 2 characters');
+            isValid = false;
+        }
+
+        // Validate email
+        if (!validateEmail(email.value)) {
+            showError(email, 'Please enter a valid email address');
+            isValid = false;
+        }
+
+        // Validate phone
+        if (!validatePhone(phone.value)) {
+            showError(phone, 'Please enter a valid phone number');
+            isValid = false;
+        }
+
+        // Validate password
+        if (password.value.length < 6) {
+            showError(password, 'Password must be at least 6 characters');
+            isValid = false;
+        }
+
+        // Validate password confirmation
+        if (password.value !== confirmPassword.value) {
+            showError(confirmPassword, 'Passwords do not match');
+            isValid = false;
+        }
+
+        if (isValid) {
+            // Here you would typically send the registration request to your server
+            showNotification('Creating account...', 'info');
+            // Simulate API call
+            setTimeout(() => {
+                showNotification('Account created successfully!', 'success');
+                // Switch to login tab
+                document.querySelector('[data-tab="login"]').click();
+            }, 1500);
+        }
+    });
+
+    // Validation Helper Functions
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    function validatePhone(phone) {
+        const re = /^\+?[\d\s-]{10,}$/;
+        return re.test(phone);
+    }
+
+    function showError(input, message) {
+        const errorElement = document.getElementById(`${input.id}-error`);
+        if (errorElement) {
+            errorElement.textContent = message;
+        }
+        input.classList.add('invalid');
+    }
+
+    function clearErrors() {
+        document.querySelectorAll('.error-message').forEach(error => {
+            error.textContent = '';
+        });
+        document.querySelectorAll('.invalid').forEach(input => {
+            input.classList.remove('invalid');
+        });
+    }
+
+    // Notification System
+    function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+        
+        document.body.appendChild(notification);
+        
+        // Trigger reflow
+        notification.offsetHeight;
+        
+        // Add show class for animation
+        notification.classList.add('show');
+        
+        // Remove notification after 3 seconds
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => {
+                notification.remove();
+            }, 300);
+        }, 3000);
+    }
+
+    // Social Login Buttons
+    const socialButtons = document.querySelectorAll('.social-btn');
+    
+    socialButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const provider = button.classList.contains('google') ? 'Google' : 'Facebook';
+            showNotification(`Connecting to ${provider}...`, 'info');
+            // Here you would typically implement social login
+        });
+    });
+});
+
+// Scroll Animation for Benefits Section
+function handleScrollAnimation() {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Initialize scroll animation when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    handleScrollAnimation();
 }); 

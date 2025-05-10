@@ -6,15 +6,23 @@
     <meta name="description" content="View your cart and checkout at Drip Mtaani. Review your selected packages and add-ons before booking your appointment.">
     <title>Shopping Cart - Drip Mtaani</title>
     
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/cart.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
@@ -73,38 +81,20 @@
                     <div class="empty-cart-message hidden">
                         <i class="fas fa-shopping-cart"></i>
                         <p>Your cart is empty</p>
-                        <a href="packages.html" class="cta-button">Browse Packages</a>
+                        <a href="packages.html" class="btn btn-primary">Browse Packages</a>
                     </div>
                 </div>
                 
                 <div class="order-summary">
                     <h2>Order Summary</h2>
                     <div class="summary-details">
-                        <div class="summary-row">
-                            <span>Subtotal</span>
-                            <span id="subtotal">KES 0</span>
-                        </div>
-                        <div class="summary-row">
-                            <span>Service Fee</span>
-                            <span id="serviceFee">KES 0</span>
-                        </div>
                         <div class="summary-row total">
                             <span>Total</span>
                             <span id="total">KES 0</span>
                         </div>
                     </div>
-                    <button id="checkoutBtn" class="checkout-btn" disabled>Proceed to Checkout</button>
+                    <button id="checkoutBtn" class="btn btn-primary checkout-btn" disabled>Proceed to Checkout</button>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recommended Add-ons -->
-    <section class="recommended-section">
-        <div class="container">
-            <h2>Recommended Add-ons</h2>
-            <div class="recommended-grid">
-                <!-- Recommended items will be dynamically loaded here -->
             </div>
         </div>
     </section>
@@ -122,7 +112,7 @@
                 <div class="info-card">
                     <i class="fas fa-calendar"></i>
                     <h3>Available Hours</h3>
-                    <p>8 AM – 10 PM EAT, 7 days/week</p>
+                    <p>24/7, 365 days/year</p>
                 </div>
                 <div class="info-card">
                     <i class="fas fa-map-marker-alt"></i>
@@ -140,7 +130,7 @@
                 <h3>Contact Us</h3>
                 <p>Phone: +254 726 059 822</p>
                 <p>Email: dripmtaanisupport@gmail.com</p>
-                <p>Hours: 8 AM – 10 PM EAT, 7 days/week</p>
+                <p>Hours: 24/7, 365 days/year</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -162,14 +152,14 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Drip Mtaani. All rights reserved.</p>
+            <p>&copy; 2025 Drip Mtaani. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/sound.js"></script>
-    <script src="js/cart.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/sound.js" defer></script>
+    <script src="js/cart.js" defer></script>
 </body>
 </html> 

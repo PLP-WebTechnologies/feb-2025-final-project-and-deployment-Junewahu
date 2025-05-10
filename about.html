@@ -6,147 +6,171 @@
     <meta name="description" content="Learn about Drip Mtaani's mission to provide accessible mobile IV hydration services in Nairobi, Kenya. Meet our team and discover our values.">
     <title>About Us - Drip Mtaani</title>
     
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/about.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header Section -->
-    <header class="main-header">
-        <nav class="nav-container">
+    <header class="main-header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
             <div class="logo">
-                <a href="index.html">
-                    <img src="assets/images/logo.png" alt="Drip Mtaani Logo">
+                <a href="index.html" aria-label="Drip Mtaani Home">
+                    <img src="assets/images/logo.png" alt="Drip Mtaani Logo" width="150" height="40">
                 </a>
             </div>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
             </button>
-            <ul class="nav-links">
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="packages.html">Packages</a></li>
                 <li><a href="addons.html">Add-ons</a></li>
-                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle dark/light theme">
-                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-moon" aria-hidden="true"></i>
                 </button>
                 <button class="sound-toggle" aria-label="Toggle ambient sounds">
-                    <i class="fas fa-volume-up"></i>
+                    <i class="fas fa-volume-up" aria-hidden="true"></i>
                 </button>
-                <a href="cart.html" class="cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
+                <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count" aria-live="polite">0</span>
                 </a>
                 <a href="login.html" class="login-btn">Login</a>
             </div>
         </nav>
     </header>
 
-    <!-- About Hero Section -->
-    <section class="page-hero">
-        <div class="hero-content">
-            <h1>About Drip Mtaani</h1>
-            <p>Revolutionizing mobile healthcare in Nairobi</p>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- About Hero Section -->
+        <section class="page-hero" aria-labelledby="about-title">
+            <div class="hero-content">
+                <h1 id="about-title" class="hero-title">About Drip Mtaani</h1>
+                <p class="hero-subtitle">Revolutionizing mobile healthcare in Nairobi</p>
+            </div>
+            <div class="hero-background">
+                <div class="water-animation" aria-hidden="true"></div>
+            </div>
+        </section>
 
-    <!-- Our Story -->
-    <section class="story-section">
-        <div class="container">
-            <div class="story-content">
-                <h2>Our Story</h2>
-                <p>Founded in 2023, Drip Mtaani emerged from a simple observation: healthcare should be accessible, convenient, and comfortable. We noticed that many people in Nairobi were struggling with dehydration, hangovers, and general wellness issues, but the traditional healthcare system wasn't meeting their needs.</p>
-                <p>Our founder, a healthcare professional with years of experience, envisioned a service that would bring professional medical care directly to people's homes, offices, or hotels. Thus, Drip Mtaani was born – a mobile IV hydration service that combines medical expertise with convenience.</p>
+        <!-- Our Story -->
+        <section class="story-section" aria-labelledby="story-title">
+            <div class="container">
+                <div class="story-content animate-on-scroll">
+                    <h2 id="story-title" class="section-title">Our Story</h2>
+                    <p>Founded in 2025, Drip Mtaani emerged from a simple observation: healthcare should be accessible, convenient, and comfortable. We noticed that many people in Nairobi were struggling with dehydration, hangovers, and general wellness issues, but the traditional healthcare system wasn't meeting their needs.</p>
+                    <p>Our founder, a healthcare professional with years of experience, envisioned a service that would bring professional medical care directly to people's homes, offices, or hotels. Thus, Drip Mtaani was born – a mobile IV hydration service that combines medical expertise with convenience.</p>
+                </div>
+                <div class="story-image animate-on-scroll">
+                    <img src="assets/images/about/story.jpg" alt="Drip Mtaani team providing service" loading="lazy">
+                </div>
             </div>
-            <div class="story-image">
-                <img src="assets/images/about/story.jpg" alt="Drip Mtaani team providing service">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Our Mission -->
-    <section class="mission-section">
-        <div class="container">
-            <h2>Our Mission</h2>
-            <div class="mission-grid">
-                <div class="mission-card">
-                    <i class="fas fa-heart"></i>
-                    <h3>Accessibility</h3>
-                    <p>Making professional healthcare services available to everyone in Nairobi</p>
-                </div>
-                <div class="mission-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Quality</h3>
-                    <p>Maintaining the highest standards of medical care and safety</p>
-                </div>
-                <div class="mission-card">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Trust</h3>
-                    <p>Building lasting relationships with our clients through transparency</p>
+        <!-- Our Mission -->
+        <section class="mission-section" aria-labelledby="mission-title">
+            <div class="container">
+                <h2 id="mission-title" class="section-title">Our Mission</h2>
+                <div class="mission-grid">
+                    <div class="mission-card animate-on-scroll">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <h3>Accessibility</h3>
+                        <p>Making professional healthcare services available to everyone in Nairobi</p>
+                    </div>
+                    <div class="mission-card animate-on-scroll">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <h3>Quality</h3>
+                        <p>Maintaining the highest standards of medical care and safety</p>
+                    </div>
+                    <div class="mission-card animate-on-scroll">
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
+                        <h3>Trust</h3>
+                        <p>Building lasting relationships with our clients through transparency</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Our Team -->
-    <section class="team-section">
-        <div class="container">
-            <h2>Meet Our Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="assets/images/team/member1.jpg" alt="Dr. Sarah Johnson">
-                    <h3>Dr. Sarah Johnson</h3>
-                    <p>Medical Director</p>
-                </div>
-                <div class="team-member">
-                    <img src="assets/images/team/member2.jpg" alt="John Kamau">
-                    <h3>John Kamau</h3>
-                    <p>Lead Nurse</p>
-                </div>
-                <div class="team-member">
-                    <img src="assets/images/team/member3.jpg" alt="Mary Wanjiku">
-                    <h3>Mary Wanjiku</h3>
-                    <p>Customer Experience Manager</p>
+        <!-- Our Team -->
+        <section class="team-section" aria-labelledby="team-title">
+            <div class="container">
+                <h2 id="team-title" class="section-title">Meet Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member animate-on-scroll">
+                        <img src="assets/images/team/member1.jpg" alt="Dr. Sarah Johnson" loading="lazy">
+                        <h3>Dr. June Wahu</h3>
+                        <p>Medical Director</p>
+                    </div>
+                    <div class="team-member animate-on-scroll">
+                        <img src="assets/images/team/member2.jpg" alt="John Kamau" loading="lazy">
+                        <h3>John Kamau</h3>
+                        <p>Lead Nurse</p>
+                    </div>
+                    <div class="team-member animate-on-scroll">
+                        <img src="assets/images/team/member3.jpg" alt="Mary Wanjiku" loading="lazy">
+                        <h3>Mary Wanjiku</h3>
+                        <p>Customer Experience Manager</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Our Values -->
-    <section class="values-section">
-        <div class="container">
-            <h2>Our Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3>Professionalism</h3>
-                    <p>Every team member is a licensed healthcare professional</p>
-                </div>
-                <div class="value-card">
-                    <h3>Innovation</h3>
-                    <p>Continuously improving our services and technology</p>
-                </div>
-                <div class="value-card">
-                    <h3>Community</h3>
-                    <p>Supporting and giving back to the Nairobi community</p>
-                </div>
-                <div class="value-card">
-                    <h3>Excellence</h3>
-                    <p>Striving for the highest quality in everything we do</p>
+        <!-- Our Values -->
+        <section class="values-section" aria-labelledby="values-title">
+            <div class="container">
+                <h2 id="values-title" class="section-title">Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card animate-on-scroll">
+                        <i class="fas fa-user-md" aria-hidden="true"></i>
+                        <h3>Professionalism</h3>
+                        <p>Every team member is a licensed healthcare professional</p>
+                    </div>
+                    <div class="value-card animate-on-scroll">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        <h3>Innovation</h3>
+                        <p>Continuously improving our services and technology</p>
+                    </div>
+                    <div class="value-card animate-on-scroll">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <h3>Community</h3>
+                        <p>Supporting and giving back to the Nairobi community</p>
+                    </div>
+                    <div class="value-card animate-on-scroll">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <h3>Excellence</h3>
+                        <p>Striving for the highest quality in everything we do</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -155,7 +179,7 @@
                 <h3>Contact Us</h3>
                 <p>Phone: +254 726 059 822</p>
                 <p>Email: dripmtaanisupport@gmail.com</p>
-                <p>Hours: 8 AM – 10 PM EAT, 7 days/week</p>
+                <p>Hours: 24/7, 365 days/year</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -177,13 +201,14 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Drip Mtaani. All rights reserved.</p>
+            <p>&copy; 2025 Drip Mtaani. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/sound.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/sound.js" defer></script>
+    <script src="js/about.js" defer></script>
 </body>
 </html> 

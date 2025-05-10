@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Drip Mtaani for mobile IV hydration services in Nairobi. Book appointments, ask questions, or provide feedback.">
+    <meta name="keywords" content="contact, IV hydration, wellness, Nairobi, Kenya, mobile healthcare, appointment booking">
     <title>Contact Us - Drip Mtaani</title>
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -12,168 +17,248 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/contact.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header Section -->
-    <header class="main-header">
-        <nav class="nav-container">
+    <header class="main-header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
             <div class="logo">
-                <a href="index.html">
-                    <img src="assets/images/logo.png" alt="Drip Mtaani Logo">
+                <a href="index.html" aria-label="Drip Mtaani Home">
+                    <img src="assets/images/logo.png" alt="Drip Mtaani Logo" width="150" height="40">
                 </a>
             </div>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
             </button>
-            <ul class="nav-links">
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="packages.html">Packages</a></li>
                 <li><a href="addons.html">Add-ons</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
+
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle dark/light theme">
-                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-moon" aria-hidden="true"></i>
                 </button>
                 <button class="sound-toggle" aria-label="Toggle ambient sounds">
-                    <i class="fas fa-volume-up"></i>
+                    <i class="fas fa-volume-up" aria-hidden="true"></i>
                 </button>
-                <a href="cart.html" class="cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
+                <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count" aria-live="polite">0</span>
                 </a>
                 <a href="login.html" class="login-btn">Login</a>
             </div>
         </nav>
     </header>
 
-    <!-- Contact Hero Section -->
-    <section class="page-hero">
-        <div class="hero-content">
-            <h1>Contact Us</h1>
-            <p>We're here to help and answer any questions you may have</p>
-        </div>
-    </section>
-
-    <!-- Contact Information -->
-    <section class="contact-info">
-        <div class="container">
-            <div class="info-grid">
-                <div class="info-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>Call Us</h3>
-                    <p>+254 726 059 822</p>
-                    <p>Available 8 AM – 10 PM EAT</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email Us</h3>
-                    <p>dripmtaanisupport@gmail.com</p>
-                    <p>Response within 24 hours</p>
-                </div>
-                <div class="info-card">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>WhatsApp</h3>
-                    <p>+254 726 059 822</p>
-                    <p>Quick responses during business hours</p>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Contact Hero Section -->
+        <section class="page-hero" aria-labelledby="contact-title">
+            <div class="hero-content">
+                <h1 id="contact-title" class="hero-title">Get in Touch</h1>
+                <p class="hero-subtitle">Experience premium hydration services at your doorstep. Our team is ready to assist you with bookings, inquiries, and personalized wellness solutions.</p>
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        <span>Quick Response</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <span>Nairobi Wide</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="form-container">
-                <h2>Send Us a Message</h2>
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Select a subject</option>
-                            <option value="booking">Book an Appointment</option>
-                            <option value="question">General Question</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="support">Technical Support</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+            <div class="hero-background">
+                <div class="water-animation" aria-hidden="true"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Service Areas -->
-    <section class="service-areas">
-        <div class="container">
-            <h2>Areas We Serve</h2>
-            <div class="areas-grid">
-                <div class="area-card">
-                    <h3>Westlands</h3>
-                    <p>Including Lavington, Kilimani, and Kileleshwa</p>
-                </div>
-                <div class="area-card">
-                    <h3>CBD</h3>
-                    <p>Central Business District and surrounding areas</p>
-                </div>
-                <div class="area-card">
-                    <h3>Karen</h3>
-                    <p>Including Langata and surrounding neighborhoods</p>
-                </div>
-                <div class="area-card">
-                    <h3>Eastlands</h3>
-                    <p>Including Buruburu, Donholm, and Embakasi</p>
+        <!-- Contact Information -->
+        <section class="contact-info section" aria-labelledby="contact-info-title">
+            <div class="container">
+                <h2 id="contact-info-title" class="section-title">Contact Information</h2>
+                <p class="section-description">Choose your preferred method of contact. Our dedicated team is here to provide you with the best hydration and wellness services in Nairobi.</p>
+                <div class="info-grid">
+                    <div class="info-card animate-on-scroll">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <h3>Call Us</h3>
+                        <p><a href="tel:+254726059822" class="contact-link">+254 726 059 822</a></p>
+                        <p>Available 8 AM – 10 PM EAT</p>
+                        <p class="card-description">Direct line to our customer service team for immediate assistance</p>
+                    </div>
+                    <div class="info-card animate-on-scroll">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:dripmtaanisupport@gmail.com" class="contact-link">dripmtaanisupport@gmail.com</a></p>
+                        <p>Response within 24 hours</p>
+                        <p class="card-description">Perfect for detailed inquiries and non-urgent matters</p>
+                    </div>
+                    <div class="info-card animate-on-scroll">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/254726059822" class="contact-link">+254 726 059 822</a></p>
+                        <p>Quick responses during business hours</p>
+                        <p class="card-description">Ideal for quick questions and instant support</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>How do I book an appointment?</h3>
-                    <p>You can book through our website, call us, or send a WhatsApp message. We'll confirm your appointment within 30 minutes.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What are your operating hours?</h3>
-                    <p>We operate from 8 AM to 10 PM EAT, seven days a week, including holidays.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How long does the service take?</h3>
-                    <p>Most treatments take 30-45 minutes to administer, depending on the package selected.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do you accept insurance?</h3>
-                    <p>Currently, we don't accept insurance. All services are paid for out of pocket.</p>
+        <!-- Contact Form -->
+        <section class="contact-form-section section" aria-labelledby="contact-form-title">
+            <div class="container">
+                <div class="form-container animate-on-scroll">
+                    <h2 id="contact-form-title" class="section-title">Send Us a Message</h2>
+                    <p class="section-description">Fill out the form below and we'll get back to you as soon as possible. Your wellness journey starts with a simple message.</p>
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required aria-required="true" placeholder="Enter your full name">
+                            <div class="error-message" id="name-error" aria-live="polite"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required aria-required="true" placeholder="Enter your email address">
+                            <div class="error-message" id="email-error" aria-live="polite"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required aria-required="true" placeholder="Enter your phone number">
+                            <div class="error-message" id="phone-error" aria-live="polite"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" name="subject" class="form-control" required aria-required="true">
+                                <option value="">Select a subject</option>
+                                <option value="booking">Book an Appointment</option>
+                                <option value="question">General Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="support">Technical Support</option>
+                            </select>
+                            <div class="error-message" id="subject-error" aria-live="polite"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required aria-required="true" placeholder="Type your message here..."></textarea>
+                            <div class="error-message" id="message-error" aria-live="polite"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Service Areas -->
+        <section class="service-areas section" aria-labelledby="service-areas-title">
+            <div class="container">
+                <h2 id="service-areas-title" class="section-title">Areas We Serve</h2>
+                <p class="section-description">We provide our premium hydration services across major areas in Nairobi. Check if we cover your location.</p>
+                <div class="areas-grid">
+                    <div class="area-card animate-on-scroll">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <h3>Westlands</h3>
+                        <p>Including Lavington, Kilimani, and Kileleshwa</p>
+                        <p class="area-description">Premium residential and business areas with quick response times</p>
+                    </div>
+                    <div class="area-card animate-on-scroll">
+                        <i class="fas fa-building" aria-hidden="true"></i>
+                        <h3>CBD</h3>
+                        <p>Central Business District and surrounding areas</p>
+                        <p class="area-description">Perfect for corporate wellness programs and office visits</p>
+                    </div>
+                    <div class="area-card animate-on-scroll">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        <h3>Karen</h3>
+                        <p>Including Langata and surrounding neighborhoods</p>
+                        <p class="area-description">Exclusive residential areas with personalized service</p>
+                    </div>
+                    <div class="area-card animate-on-scroll">
+                        <i class="fas fa-city" aria-hidden="true"></i>
+                        <h3>Eastlands</h3>
+                        <p>Including Buruburu, Donholm, and Embakasi</p>
+                        <p class="area-description">Expanding our services to more communities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section section" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 id="faq-title" class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Find answers to common questions about our services, booking process, and more.</p>
+                <div class="faq-grid">
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <h3>How do I book an appointment?</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Booking with Drip Mtaani is simple and convenient. You can book through our website, call us directly, or send a WhatsApp message. Our team will confirm your appointment within 30 minutes and provide all necessary details for your visit.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <h3>What are your operating hours?</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We operate from 8 AM to 10 PM EAT, seven days a week, including holidays. This extended schedule ensures we can accommodate your needs at your convenience, whether it's early morning or late evening.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <h3>How long does the service take?</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most treatments take 30-45 minutes to administer, depending on the package selected. Our experienced medical professionals ensure a comfortable and efficient process, with minimal disruption to your schedule.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <h3>Do you accept insurance?</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Currently, we don't accept insurance. All services are paid for out of pocket. We offer competitive pricing and various payment options to ensure our premium hydration services are accessible to everyone.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -182,7 +267,7 @@
                 <h3>Contact Us</h3>
                 <p>Phone: +254 726 059 822</p>
                 <p>Email: dripmtaanisupport@gmail.com</p>
-                <p>Hours: 8 AM – 10 PM EAT, 7 days/week</p>
+                <p>Hours: 24/7, 365 days/year</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -204,13 +289,14 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Drip Mtaani. All rights reserved.</p>
+            <p>&copy; 2025 Drip Mtaani. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/sound.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/sound.js" defer></script>
+    <script src="js/contact.js" defer></script>
 </body>
 </html> 

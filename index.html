@@ -7,15 +7,23 @@
     <meta name="keywords" content="IV hydration, wellness, hangover treatment, Nairobi, Kenya, mobile healthcare">
     <title>Drip Mtaani - Mobile IV Hydration & Wellness</title>
     
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/index.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -27,83 +35,217 @@
     </script>
 </head>
 <body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header Section -->
-    <header class="main-header">
-        <nav class="nav-container">
+    <header class="main-header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
             <div class="logo">
-                <a href="index.html">
-                    <img src="assets/images/logo.png" alt="Drip Mtaani Logo">
+                <a href="index.html" aria-label="Drip Mtaani Home">
+                    <img src="assets/images/logo.png" alt="Drip Mtaani Logo" width="150" height="40">
                 </a>
             </div>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="packages.html">Packages</a></li>
                 <li><a href="addons.html">Add-ons</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle dark/light theme">
-                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-moon" aria-hidden="true"></i>
                 </button>
                 <button class="sound-toggle" aria-label="Toggle ambient sounds">
-                    <i class="fas fa-volume-up"></i>
+                    <i class="fas fa-volume-up" aria-hidden="true"></i>
                 </button>
-                <a href="cart.html" class="cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
+                <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count" aria-live="polite">0</span>
                 </a>
                 <a href="login.html" class="login-btn">Login</a>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Don't tough it out - drip it out</h1>
-            <p>Fast, discreet, safe recovery with no hospital queues or judgment</p>
-            <a href="packages.html" class="cta-button">View Packages</a>
-        </div>
-        <div class="hero-background">
-            <div class="water-animation"></div>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title" class="hero-title">Don't tough it out - drip it out</h1>
+                <p class="hero-subtitle">Beat Hangovers with Licensed Nurses at Your Doorstep</p>
+                <div class="hero-cta">
+                    <a href="packages.html" class="btn btn-primary">View Packages</a>
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-tint" aria-hidden="true"></i>
+                        <span>Premium IV Therapy</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <span>Add-on Services</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-truck" aria-hidden="true"></i>
+                        <span>Fast Delivery</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Featured Packages Section -->
-    <section class="featured-packages">
-        <h2>Our Treatment Packages</h2>
-        <div class="package-grid">
-            <!-- Package cards will be dynamically loaded here -->
-        </div>
-    </section>
+        <!-- Occasions Section -->
+        <section class="occasions-section" aria-labelledby="occasions-title">
+            <div class="container">
+                <h2 id="occasions-title" class="section-title">Perfect for Every Occasion</h2>
+                <div class="occasions-grid">
+                    <!-- Hangovers -->
+                    <div class="occasion-card animate-on-scroll">
+                        <img src="assets/images/occasions/hangover.jpg" alt="Hangover Recovery" class="occasion-image">
+                        <div class="occasion-content">
+                            <h3>Hangover Recovery</h3>
+                            <p>Fast relief from hangover symptoms with our specialized IV therapy packages.</p>
+                            <ul class="occasion-features">
+                                <li><i class="fas fa-check"></i> Rapid rehydration</li>
+                                <li><i class="fas fa-check"></i> Vitamin boost</li>
+                                <li><i class="fas fa-check"></i> Anti-nausea medication</li>
+                                <li><i class="fas fa-check"></i> Pain relief</li>
+                            </ul>
+                        </div>
+                    </div>
 
-    <!-- AI Triage Chatbot -->
-    <div class="chatbot-container">
-        <button class="chatbot-toggle" aria-label="Open AI Triage Chatbot">
-            <i class="fas fa-robot"></i>
-        </button>
-        <div class="chatbot-window hidden">
-            <div class="chatbot-header">
-                <h3>AI Health Assessment</h3>
-                <button class="close-chatbot" aria-label="Close chatbot">×</button>
-            </div>
-            <div class="chatbot-messages">
-                <!-- Chat messages will be dynamically loaded here -->
-            </div>
-            <div class="chatbot-input">
-                <input type="text" placeholder="Type your message..." aria-label="Chat message">
-                <button class="send-message" aria-label="Send message">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </div>
-        </div>
+                    <!-- Busy Weekends -->
+                    <div class="occasion-card animate-on-scroll">
+                        <img src="assets/images/occasions/weekend.jpg" alt="Busy Weekends" class="occasion-image">
+                        <div class="occasion-content">
+                            <h3>Busy Weekends</h3>
+                            <p>Stay energized and refreshed during your busy weekend activities.</p>
+                            <ul class="occasion-features">
+                                <li><i class="fas fa-check"></i> Energy boost</li>
+                                <li><i class="fas fa-check"></i> Immune support</li>
+                                <li><i class="fas fa-check"></i> Stress relief</li>
+                                <li><i class="fas fa-check"></i> Quick recovery</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Big Occasions -->
+                    <div class="occasion-card animate-on-scroll">
+                        <img src="assets/images/occasions/occasion.jpg" alt="Big Occasions" class="occasion-image">
+                        <div class="occasion-content">
+                            <h3>Big Occasions</h3>
+                            <p>Look and feel your best for important events and celebrations.</p>
+                            <ul class="occasion-features">
+                                <li><i class="fas fa-check"></i> Body rejuvination</li>
+                                <li><i class="fas fa-check"></i> Quick recovery</li>
+                                <li><i class="fas fa-check"></i> Energy enhancement</li>
+                                <li><i class="fas fa-check"></i> VIP treatment</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Happy Holidays -->
+                    <div class="occasion-card animate-on-scroll">
+                        <img src="assets/images/occasions/holiday.jpg" alt="Happy Holidays" class="occasion-image">
+                        <div class="occasion-content">
+                            <h3>Happy Holidays</h3>
+                            <p>Special packages for holiday celebrations and family gatherings.</p>
+                            <ul class="occasion-features">
+                                <li><i class="fas fa-check"></i> Group packages</li>
+                                <li><i class="fas fa-check"></i> Festive add-ons</li>
+                                <li><i class="fas fa-check"></i> Gift vouchers</li>
+                                <li><i class="fas fa-check"></i> Special discounts</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Travel Recovery -->
+<div class="occasion-card animate-on-scroll">
+    <img src="assets/images/occasions/travel.jpg" alt="Travel Recovery" class="occasion-image">
+    <div class="occasion-content">
+        <h3>Travel Recovery</h3>
+        <p>Recover quickly during vacations.</p>
+        <ul class="occasion-features">
+            <li><i class="fas fa-check"></i> Rehydration & electrolyte balance</li>
+            <li><i class="fas fa-check"></i> Boost energy & focus</li>
+            <li><i class="fas fa-check"></i> Reduce travel fatigue</li>
+            <li><i class="fas fa-check"></i> Convenient home or hotel service</li>
+        </ul>
     </div>
+</div>
+
+<!-- Busy Professionals -->
+<div class="occasion-card animate-on-scroll">
+    <img src="assets/images/occasions/professionals.jpg" alt="Busy Professionals" class="occasion-image">
+    <div class="occasion-content">
+        <h3>Busy Professionals</h3>
+        <p>Stay sharp and energized during hectic workdays.</p>
+        <ul class="occasion-features">
+            <li><i class="fas fa-check"></i> Increased focus & stamina</li>
+            <li><i class="fas fa-check"></i> Fast recovery from fatigue</li>
+            <li><i class="fas fa-check"></i> Convenient scheduling</li>
+            <li><i class="fas fa-check"></i> Professional, licensed nurses</li>
+        </ul>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section" aria-labelledby="benefits-title">
+            <div class="container">
+                <h2 id="benefits-title" class="section-title">Why Choose Us</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card animate-on-scroll">
+                        <i class="fas fa-user-md"></i>
+                        <h3>Professional Care</h3>
+                        <p>Our team consists of licensed healthcare professionals dedicated to your well-being.</p>
+                        <ul class="benefit-features">
+                            <li><i class="fas fa-check"></i> Licensed medical staff</li>
+                            <li><i class="fas fa-check"></i> Safe procedures</li>
+                            <li><i class="fas fa-check"></i> Quality equipment</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit-card animate-on-scroll">
+                        <i class="fas fa-clock"></i>
+                        <h3>24/7 Service</h3>
+                        <p>We're available round the clock to provide care when you need it most.</p>
+                        <ul class="benefit-features">
+                            <li><i class="fas fa-check"></i> Anytime delivery</li>
+                            <li><i class="fas fa-check"></i> Quick response</li>
+                            <li><i class="fas fa-check"></i> Flexible scheduling</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit-card animate-on-scroll">
+                        <i class="fas fa-heart"></i>
+                        <h3>Personalized Care</h3>
+                        <p>Receive customized treatment recommendations based on your unique needs.</p>
+                        <ul class="benefit-features">
+                            <li><i class="fas fa-check"></i> Customized packages</li>
+                            <li><i class="fas fa-check"></i> Wellness tracking</li>
+                            <li><i class="fas fa-check"></i> Expert recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -112,7 +254,7 @@
                 <h3>Contact Us</h3>
                 <p>Phone: +254 726 059 822</p>
                 <p>Email: dripmtaanisupport@gmail.com</p>
-                <p>Hours: 8 AM – 10 PM EAT, 7 days/week</p>
+                <p>Hours: 24/7, 365 days/year</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -134,14 +276,27 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Drip Mtaani. All rights reserved.</p>
+            <p>&copy; 2025 Drip Mtaani. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/chatbot.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/sound.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/sound.js" defer></script>
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html> 

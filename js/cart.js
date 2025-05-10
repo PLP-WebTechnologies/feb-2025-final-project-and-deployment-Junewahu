@@ -2,7 +2,6 @@
 class CartManager {
     constructor() {
         this.cart = JSON.parse(localStorage.getItem('cart')) || [];
-        this.serviceFee = 500; // KES 500 service fee
         this.init();
     }
 
@@ -24,7 +23,7 @@ class CartManager {
             return;
         }
 
-        emptyCartMessage.classList.add('hidden');
+        emptyCartMessage.classList.remove('hidden');
         checkoutBtn.disabled = false;
 
         cartItemsList.innerHTML = this.cart.map(item => this.createCartItemHTML(item)).join('');
@@ -54,11 +53,7 @@ class CartManager {
     }
 
     updateTotals() {
-        const subtotal = this.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-        const total = subtotal + this.serviceFee;
-
-        document.getElementById('subtotal').textContent = `KES ${subtotal}`;
-        document.getElementById('serviceFee').textContent = `KES ${this.serviceFee}`;
+        const total = this.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         document.getElementById('total').textContent = `KES ${total}`;
     }
 

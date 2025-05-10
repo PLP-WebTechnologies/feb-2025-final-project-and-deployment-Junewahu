@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Enhance your IV therapy experience with our premium add-ons at Drip Mtaani. From vitamin boosts to specialty treatments.">
+    <meta name="description" content="Browse our selection of add-ons and essentials at Drip Mtaani. From hygiene products to comfort items, we've got you covered.">
+    <meta name="keywords" content="add-ons, essentials, hygiene products, comfort items, Nairobi, Kenya">
     <title>Add-ons - Drip Mtaani</title>
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -12,9 +17,13 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/addons.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
@@ -56,73 +65,531 @@
     <!-- Add-ons Hero Section -->
     <section class="page-hero">
         <div class="hero-content">
-            <h1>Enhance Your Treatment</h1>
-            <p>Customize your experience with our premium add-ons</p>
+            <h1>Add-ons & Essentials</h1>
+            <p>Everything you need for a complete recovery experience</p>
         </div>
     </section>
 
-    <!-- Add-ons Grid -->
-    <section class="addons-section">
+    <!-- Add-ons Section -->
+    <section class="add-ons-section">
         <div class="container">
-            <div class="addon-filters">
-                <button class="filter-btn active" data-filter="all">All Add-ons</button>
-                <button class="filter-btn" data-filter="vitamins">Vitamins</button>
-                <button class="filter-btn" data-filter="specialty">Specialty</button>
-                <button class="filter-btn" data-filter="wellness">Wellness</button>
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="refreshments">Refreshments</button>
+                <button class="filter-btn" data-filter="hygiene">Hygiene</button>
+                <button class="filter-btn" data-filter="apparel">Apparel</button>
+                <button class="filter-btn" data-filter="essentials">Essentials</button>
+                <button class="filter-btn" data-filter="health">Health</button>
             </div>
             
-            <div class="addon-grid">
-                <!-- Add-on cards will be dynamically loaded here -->
-            </div>
-        </div>
-    </section>
+            <div class="add-ons-grid">
+                <!-- Refreshments -->
+                <div class="add-on-card" data-category="refreshments">
+                    <div class="add-on-icon">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Beef Broth (Tumbukiza)</h3>
+                        <p class="add-on-price">KES 500</p>
+                        <p class="add-on-description">Traditional beef broth for comfort and recovery</p>
+                        <button class="add-to-cart-btn" data-item="beef-broth" data-name="Beef Broth" data-price="200">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
 
-    <!-- Popular Combinations -->
-    <section class="combinations-section">
-        <div class="container">
-            <h2>Popular Combinations</h2>
-            <div class="combinations-grid">
-                <div class="combination-card">
-                    <h3>Energy Boost</h3>
-                    <p>Hangover Halt + B12 + Glutathione</p>
-                    <p class="price">KES 2,500</p>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+                <div class="add-on-card" data-category="refreshments">
+                    <div class="add-on-icon">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Chocolate Bar</h3>
+                        <p class="add-on-price">KES 300</p>
+                        <p class="add-on-description">Sweet treat for energy boost</p>
+                        <button class="add-to-cart-btn" data-item="chocolate" data-name="Chocolate Bar" data-price="150">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
                 </div>
-                <div class="combination-card">
-                    <h3>Beauty Treatment</h3>
-                    <p>Relief Rush + Biotin + Collagen</p>
-                    <p class="price">KES 3,500</p>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="combination-card">
-                    <h3>Immune Support</h3>
-                    <p>Recovery Max + Vitamin C + Zinc</p>
-                    <p class="price">KES 4,000</p>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2>How to Add On</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Choose Your Package</h3>
-                    <p>Select from our range of base treatment packages</p>
+                <div class="add-on-card" data-category="refreshments">
+                    <div class="add-on-icon">
+                        <i class="fas fa-glass-milk"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Milk</h3>
+                        <p class="add-on-price">KES 80</p>
+                        <p class="add-on-description">Fresh milk for comfort</p>
+                        <button class="add-to-cart-btn" data-item="milk" data-name="Milk" data-price="100">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>Pick Add-ons</h3>
-                    <p>Enhance your treatment with our premium add-ons</p>
+
+                <div class="add-on-card" data-category="refreshments">
+                    <div class="add-on-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>RedBull</h3>
+                        <p class="add-on-price">KES 400</p>
+                        <p class="add-on-description">Energy drink for quick boost</p>
+                        <button class="add-to-cart-btn" data-item="redbull" data-name="RedBull" data-price="250">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>Book & Enjoy</h3>
-                    <p>Schedule your appointment and experience the benefits</p>
+
+                <div class="add-on-card" data-category="refreshments">
+                    <div class="add-on-icon">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Crackers</h3>
+                        <p class="add-on-price">KES 100</p>
+                        <p class="add-on-description">Light snack for recovery</p>
+                        <button class="add-to-cart-btn" data-item="crackers" data-name="Crackers" data-price="100">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="refreshments">
+                    <div class="add-on-icon">
+                        <i class="fas fa-bottle-water"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Water Bottle</h3>
+                        <p class="add-on-price">KES 150</p>
+                        <p class="add-on-description">Stay hydrated on the go</p>
+                        <button class="add-to-cart-btn" data-item="water-bottle" data-name="Water Bottle" data-price="150">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hygiene -->
+                <div class="add-on-card" data-category="hygiene">
+                    <div class="add-on-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Condoms</h3>
+                        <p class="add-on-price">KES 200</p>
+                        <p class="add-on-description">Safe sex essentials</p>
+                        <button class="add-to-cart-btn" data-item="condoms" data-name="Condoms" data-price="100">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="hygiene">
+                    <div class="add-on-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Morning-After Pill</h3>
+                        <p class="add-on-price">KES 500</p>
+                        <p class="add-on-description">Emergency contraception</p>
+                        <button class="add-to-cart-btn" data-item="morning-after-pill" data-name="Morning-After Pill" data-price="500">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="hygiene">
+                    <div class="add-on-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Pads</h3>
+                        <p class="add-on-price">KES 150</p>
+                        <p class="add-on-description">Feminine hygiene products</p>
+                        <button class="add-to-cart-btn" data-item="pads" data-name="Pads" data-price="150">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="hygiene">
+                    <div class="add-on-icon">
+                        <i class="fas fa-toilet-paper"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Tissue</h3>
+                        <p class="add-on-price">KES 60</p>
+                        <p class="add-on-description">Soft tissue paper</p>
+                        <button class="add-to-cart-btn" data-item="tissue" data-name="Tissue" data-price="50">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="hygiene">
+                    <div class="add-on-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Tampons</h3>
+                        <p class="add-on-price">KES 450</p>
+                        <p class="add-on-description">Feminine hygiene products</p>
+                        <button class="add-to-cart-btn" data-item="tampons" data-name="Tampons" data-price="150">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="hygiene">
+                    <div class="add-on-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Wet Wipes</h3>
+                        <p class="add-on-price">KES 200</p>
+                        <p class="add-on-description">Refreshing wet wipes</p>
+                        <button class="add-to-cart-btn" data-item="wet-wipes" data-name="Wet Wipes" data-price="100">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Apparel -->
+                <div class="add-on-card" data-category="apparel">
+                    <div class="add-on-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Drip Mtaani T-shirt</h3>
+                        <p class="add-on-price">KES 1,000</p>
+                        <p class="add-on-description">Comfortable branded t-shirt</p>
+                        <button class="add-to-cart-btn" data-item="tshirt" data-name="Branded T-shirt" data-price="1500">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="apparel">
+                    <div class="add-on-icon">
+                        <i class="fas fa-socks"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Drip Mtaani Socks</h3>
+                        <p class="add-on-price">KES 200</p>
+                        <p class="add-on-description">Comfortable branded socks</p>
+                        <button class="add-to-cart-btn" data-item="socks" data-name="Branded Socks" data-price="800">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="apparel">
+                    <div class="add-on-icon">
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Drip Mtaani Sandals</h3>
+                        <p class="add-on-price">KES 1,000</p>
+                        <p class="add-on-description">Comfortable branded sandals</p>
+                        <button class="add-to-cart-btn" data-item="sandals" data-name="Branded Sandals" data-price="2000">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="apparel">
+                    <div class="add-on-icon">
+                        <i class="fas fa-vest"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Drip Mtaani Hoodie</h3>
+                        <p class="add-on-price">KES 2,500</p>
+                        <p class="add-on-description">Warm and comfortable hoodie</p>
+                        <button class="add-to-cart-btn" data-item="hoodie" data-name="Branded Hoodie" data-price="2500">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="apparel">
+                    <div class="add-on-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Drip Mtaani Sweatpants</h3>
+                        <p class="add-on-price">KES 2,000</p>
+                        <p class="add-on-description">Comfortable sweatpants</p>
+                        <button class="add-to-cart-btn" data-item="sweatpants" data-name="Branded Sweatpants" data-price="2000">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Essentials -->
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Type B USB Cable</h3>
+                        <p class="add-on-price">KES 400</p>
+                        <p class="add-on-description">Oraimo Type B USB Cable</p>
+                        <button class="add-to-cart-btn" data-item="usb-b" data-name="Type B USB Cable" data-price="400">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Type C USB Cable</h3>
+                        <p class="add-on-price">KES 400</p>
+                        <p class="add-on-description">Oraimo Type C USB Cable</p>
+                        <button class="add-to-cart-btn" data-item="usb-c" data-name="Type C USB Cable" data-price="400">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Phone Charger Adapter</h3>
+                        <p class="add-on-price">KES 200</p>
+                        <p class="add-on-description">Universal phone charger adapter</p>
+                        <button class="add-to-cart-btn" data-item="charger-adapter" data-name="Phone Charger Adapter" data-price="200">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-ribbon"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Hair Bands</h3>
+                        <p class="add-on-price">KES 150</p>
+                        <p class="add-on-description">Pack of hair bands</p>
+                        <button class="add-to-cart-btn" data-item="hair-bands" data-name="Hair Bands" data-price="150">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Toothbrush</h3>
+                        <p class="add-on-price">KES 100</p>
+                        <p class="add-on-description">Soft bristle toothbrush</p>
+                        <button class="add-to-cart-btn" data-item="toothbrush" data-name="Toothbrush" data-price="100">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Toothpaste</h3>
+                        <p class="add-on-price">KES 150</p>
+                        <p class="add-on-description">Fresh mint toothpaste</p>
+                        <button class="add-to-cart-btn" data-item="toothpaste" data-name="Toothpaste" data-price="150">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Small Perfume</h3>
+                        <p class="add-on-price">KES 300</p>
+                        <p class="add-on-description">Travel size perfume</p>
+                        <button class="add-to-cart-btn" data-item="perfume" data-name="Small Perfume" data-price="300">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-hand-holding-water"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Body Lotion</h3>
+                        <p class="add-on-price">KES 300</p>
+                        <p class="add-on-description">Travel size body lotion</p>
+                        <button class="add-to-cart-btn" data-item="body-lotion" data-name="Body Lotion" data-price="300">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-hand-holding-water"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Petroleum Jelly</h3>
+                        <p class="add-on-price">KES 150</p>
+                        <p class="add-on-description">Small jar of petroleum jelly</p>
+                        <button class="add-to-cart-btn" data-item="petroleum-jelly" data-name="Petroleum Jelly" data-price="150">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-lips"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Lip Balm</h3>
+                        <p class="add-on-price">KES 200</p>
+                        <p class="add-on-description">Moisturizing lip balm</p>
+                        <button class="add-to-cart-btn" data-item="lip-balm" data-name="Lip Balm" data-price="200">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-soap"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Bar of Soap</h3>
+                        <p class="add-on-price">KES 100</p>
+                        <p class="add-on-description">Fresh scented soap</p>
+                        <button class="add-to-cart-btn" data-item="soap" data-name="Bar of Soap" data-price="100">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-hand-holding-water"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Hand Towel</h3>
+                        <p class="add-on-price">KES 200</p>
+                        <p class="add-on-description">Soft hand towel</p>
+                        <button class="add-to-cart-btn" data-item="hand-towel" data-name="Hand Towel" data-price="200">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Gum</h3>
+                        <p class="add-on-price">KES 50</p>
+                        <p class="add-on-description">Fresh mint gum</p>
+                        <button class="add-to-cart-btn" data-item="gum" data-name="Gum" data-price="50">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Mints</h3>
+                        <p class="add-on-price">KES 50</p>
+                        <p class="add-on-description">Fresh breath mints</p>
+                        <button class="add-to-cart-btn" data-item="mints" data-name="Mints" data-price="50">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="essentials">
+                    <div class="add-on-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Hair Comb</h3>
+                        <p class="add-on-price">KES 100</p>
+                        <p class="add-on-description">Wide-tooth hair comb</p>
+                        <button class="add-to-cart-btn" data-item="hair-comb" data-name="Hair Comb" data-price="100">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Health -->
+                <div class="add-on-card" data-category="health">
+                    <div class="add-on-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>HIV Test Kit</h3>
+                        <p class="add-on-price">KES 500</p>
+                        <p class="add-on-description">Rapid HIV test kit</p>
+                        <button class="add-to-cart-btn" data-item="hiv-kit" data-name="HIV Test Kit" data-price="500">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="health">
+                    <div class="add-on-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Pregnancy Test Kit</h3>
+                        <p class="add-on-price">KES 300</p>
+                        <p class="add-on-description">Rapid pregnancy test</p>
+                        <button class="add-to-cart-btn" data-item="pregnancy-kit" data-name="Pregnancy Test Kit" data-price="300">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="health">
+                    <div class="add-on-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>STD Testing Kit</h3>
+                        <p class="add-on-price">KES 1,500</p>
+                        <p class="add-on-description">Comprehensive STD test kit</p>
+                        <button class="add-to-cart-btn" data-item="std-kit" data-name="STD Testing Kit" data-price="1000">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-on-card" data-category="health">
+                    <div class="add-on-icon">
+                        <i class="fas fa-band-aid"></i>
+                    </div>
+                    <div class="add-on-content">
+                        <h3>Band Aid</h3>
+                        <p class="add-on-price">KES 100</p>
+                        <p class="add-on-description">First aid bandages</p>
+                        <button class="add-to-cart-btn" data-item="bandaid" data-name="Band Aid" data-price="100">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,7 +602,7 @@
                 <h3>Contact Us</h3>
                 <p>Phone: +254 726 059 822</p>
                 <p>Email: dripmtaanisupport@gmail.com</p>
-                <p>Hours: 8 AM – 10 PM EAT, 7 days/week</p>
+                <p>Hours: 24/7, 365 days/year</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -157,13 +624,14 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Drip Mtaani. All rights reserved.</p>
+            <p>&copy; 2025 Drip Mtaani. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/sound.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/sound.js" defer></script>
+    <script src="js/addons.js" defer></script>
 </body>
 </html> 
