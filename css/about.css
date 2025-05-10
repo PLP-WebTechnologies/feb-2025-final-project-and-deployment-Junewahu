@@ -1,45 +1,86 @@
 /* About Page Styles */
 
 /* Hero Section */
-.page-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    padding: 8rem 0 6rem;
+.about-hero {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+    color: var(--text-light);
+    padding: var(--spacing-xxl) 0;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-.page-hero::before {
+.about-hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../assets/images/hero-pattern.svg') center/cover;
-    opacity: 0.1;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    pointer-events: none;
 }
 
-.hero-content {
+.about-hero-title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-lg);
     position: relative;
     z-index: 1;
-    max-width: 800px;
+}
+
+.about-hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 0 1rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
 }
 
-.hero-title {
-    font-size: 4rem;
-    color: white;
-    margin-bottom: 1.5rem;
-    animation: fadeInUp 0.6s ease;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.about-section {
+    padding: var(--spacing-xxl) 0;
 }
 
-.hero-subtitle {
+.about-section:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.about-card {
+    background: var(--bg-primary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.about-card-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-color);
+}
+
+.about-card-title {
     font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.9);
-    animation: fadeInUp 0.6s ease 0.2s backwards;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.about-card-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 /* Story Section */
@@ -142,44 +183,64 @@
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
 }
 
 .team-member {
-    background: var(--card-background);
+    background: var(--bg-primary);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-normal);
 }
 
 .team-member:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
 }
 
-.team-member img {
+.team-member-image {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
-.team-member:hover img {
-    transform: scale(1.05);
+.team-member-info {
+    padding: var(--spacing-lg);
 }
 
-.team-member h3 {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin: 1.5rem 0 0.5rem;
-    padding: 0 1.5rem;
+.team-member-name {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-primary);
 }
 
-.team-member p {
-    color: var(--text-light);
-    padding: 0 1.5rem 1.5rem;
+.team-member-role {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+}
+
+.team-member-bio {
+    color: var(--text-secondary);
+    font-size: var(--font-size-small);
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.social-link {
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.social-link:hover {
+    color: var(--primary-color);
 }
 
 /* Values Section */
@@ -190,39 +251,38 @@
 
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
 }
 
 .value-card {
-    background: var(--card-background);
-    padding: 2rem;
+    background: var(--bg-primary);
     border-radius: var(--border-radius-lg);
-    text-align: center;
+    padding: var(--spacing-xl);
     box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-normal);
 }
 
 .value-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
 }
 
-.value-card i {
-    font-size: 2.5rem;
+.value-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--spacing-lg);
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
 }
 
-.value-card h3 {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
+.value-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
 }
 
-.value-card p {
-    color: var(--text-light);
+.value-description {
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
@@ -272,43 +332,33 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 3rem;
+    .about-hero-title {
+        font-size: 2.5rem;
     }
 
-    .hero-subtitle {
-        font-size: 1.2rem;
+    .about-hero-subtitle {
+        font-size: 1.125rem;
     }
 
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .story-content p {
-        font-size: 1.1rem;
-    }
-
-    .mission-grid,
+    .about-grid,
     .team-grid,
     .values-grid {
         grid-template-columns: 1fr;
     }
+
+    .team-member-image {
+        height: 250px;
+    }
 }
 
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 2.5rem;
+    .about-hero-title {
+        font-size: 2rem;
     }
 
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .story-content p {
-        font-size: 1rem;
+    .about-card,
+    .team-member,
+    .value-card {
+        padding: var(--spacing-lg);
     }
 } 

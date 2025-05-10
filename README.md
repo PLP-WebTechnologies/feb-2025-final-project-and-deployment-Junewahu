@@ -1,5 +1,7 @@
 # Drip Mtaani - Mobile IV Hydration & Wellness Service
 
+![Screenshot](./assets/images/screenshot.png)
+
 © 2024 Drip Mtaani. All Rights Reserved.
 
 A modern e-commerce website for Drip Mtaani, a mobile IV hydration and wellness service in Nairobi, Kenya. The platform provides a seamless experience for booking IV therapy treatments and add-ons, with a focus on user experience, accessibility, and mobile-first design.

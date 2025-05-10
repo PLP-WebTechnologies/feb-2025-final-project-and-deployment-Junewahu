@@ -1,155 +1,192 @@
 /* Add-ons Page Styles */
 
 /* Hero Section */
-.page-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    color: white;
-    padding: 4rem 0;
+.addons-hero {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+    color: var(--text-light);
+    padding: var(--spacing-xxl) 0;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-.page-hero::before {
+.addons-hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../assets/images/hero-pattern.svg') center/cover;
-    opacity: 0.1;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    pointer-events: none;
 }
 
-.hero-content {
+.addons-hero-title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-lg);
     position: relative;
     z-index: 1;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: fadeInUp 0.6s ease;
-}
-
-.hero-content p {
+.addons-hero-subtitle {
     font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
     opacity: 0.9;
-    animation: fadeInUp 0.6s ease 0.2s backwards;
+    position: relative;
+    z-index: 1;
 }
 
-/* Category Filters */
-.category-filters {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
+.addons-section {
+    padding: var(--spacing-xxl) 0;
 }
 
-.filter-btn {
-    padding: 0.75rem 1.5rem;
-    background: var(--card-background);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    color: var(--text-color);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 500;
+.addons-section:nth-child(even) {
+    background-color: var(--bg-secondary);
 }
 
-.filter-btn:hover,
-.filter-btn.active {
-    background: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-}
-
-/* Add-ons Grid */
-.add-ons-grid {
+.addons-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
 }
 
-.add-on-card {
-    background: var(--card-background);
+.addon-card {
+    background: var(--bg-primary);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-.add-on-card:hover {
-    transform: translateY(-5px);
+.addon-card:hover {
+    transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
 }
 
-.add-on-icon {
-    background: var(--primary-gradient);
-    color: white;
-    padding: 1.5rem;
-    text-align: center;
-    font-size: 2rem;
-}
-
-.add-on-content {
-    padding: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.add-on-content h3 {
-    font-size: 1.25rem;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-}
-
-.add-on-price {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.add-on-description {
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    flex-grow: 1;
-}
-
-.add-to-cart-btn {
+.addon-image {
     width: 100%;
-    padding: 0.75rem;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    height: 200px;
+    object-fit: cover;
+}
+
+.addon-content {
+    padding: var(--spacing-xl);
+}
+
+.addon-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.addon-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.addon-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+}
+
+.addon-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-lg);
+}
+
+.addon-feature {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+}
+
+.addon-feature::before {
+    content: '✓';
+    color: var(--primary-color);
+    margin-right: var(--spacing-sm);
+    font-weight: bold;
+}
+
+.addon-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.addon-button {
+    flex: 1;
+    text-align: center;
+}
+
+.addon-category {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--primary-light);
+    color: var(--text-light);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-small);
+    margin-bottom: var(--spacing-md);
+}
+
+.addon-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.addon-tag {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-small);
+    transition: background-color var(--transition-fast);
+}
+
+.addon-tag:hover {
+    background-color: var(--primary-light);
+    color: var(--text-light);
+}
+
+.addon-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-secondary);
     font-weight: 500;
 }
 
-.add-to-cart-btn:hover {
-    background: var(--primary-dark);
+.filter-select {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: border-color var(--transition-fast);
 }
 
-.add-to-cart-btn i {
-    font-size: 0.875rem;
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
 }
 
 /* Notification */
@@ -198,48 +235,41 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .page-hero {
-        padding: 3rem 0;
-    }
-
-    .hero-content h1 {
+    .addons-hero-title {
         font-size: 2.5rem;
     }
 
-    .hero-content p {
-        font-size: 1.1rem;
+    .addons-hero-subtitle {
+        font-size: 1.125rem;
     }
 
-    .category-filters {
-        gap: 0.5rem;
+    .addons-grid {
+        grid-template-columns: 1fr;
     }
 
-    .filter-btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+    .addon-actions {
+        flex-direction: column;
     }
 
-    .add-ons-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.5rem;
+    .addon-button {
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .page-hero {
-        padding: 2rem 0;
-    }
-
-    .hero-content h1 {
+    .addons-hero-title {
         font-size: 2rem;
     }
 
-    .add-ons-grid {
-        grid-template-columns: 1fr;
+    .addon-content {
+        padding: var(--spacing-lg);
     }
 
-    .add-on-card {
-        max-width: 400px;
-        margin: 0 auto;
+    .addon-filters {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
     }
 } 
