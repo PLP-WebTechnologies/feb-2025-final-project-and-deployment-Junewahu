@@ -89,6 +89,8 @@ drip-mtaani/
 
 The site is deployed on GitHub Pages. Any changes pushed to the main branch will automatically trigger a deployment.
 
+Live Demo: [https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-Junewahu/index.html](https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-Junewahu/index.html)
+
 ## Accessibility Features
 
 - Semantic HTML structure
